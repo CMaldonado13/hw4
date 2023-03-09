@@ -7,5 +7,10 @@
 </ul>
 
 <p>
+<% if @current_user%>
   <a href="/places/new">New place</a>
+<% else %>
+Please <a href="/login">Login</a>
+  
+  <%end%>  
 </p>
