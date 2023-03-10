@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
     if @current_user
     @places = Place.where({"user_id" => @current_user["id"]})
     else
-      @places = Place.all 
+    @places = Place.all 
     end
   end
 
