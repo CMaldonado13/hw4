@@ -2,8 +2,8 @@ class PlacesController < ApplicationController
 
   def index
     if @current_user
-      @places = Place.all
-    # @places = Place.where({"user_id" => @current_user["id"]})
+     
+    @places = Place.where({"user_id" => @current_user["id"]})
     else
     @places = Place.all 
     end
