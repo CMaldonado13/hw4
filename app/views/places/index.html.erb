@@ -1,16 +1,15 @@
 <h1>Places</h1>
-
-<ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
-</ul>
-
-<p>
 <% if @current_user%>
-  <a href="/places/new">New place</a>
+<h2>
+  <% for place in @places %>
+    <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+  <% end %>
+</h2>
+
+ <h6> <a href="/places/new">New place</a>
+ </h6> 
 <% else %>
+<h6>
 Please <a href="/login">Login</a>
-  
+</h6>
   <%end%>  
-</p>
