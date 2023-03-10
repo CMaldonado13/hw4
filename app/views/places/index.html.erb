@@ -1,7 +1,7 @@
 <h1>Places</h1>
 <% if @current_user%>
 <h2>
-  <% for place in @places %>
+  <% for place in @places%>
     <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
   <% end %>
 </h2>
